@@ -4,6 +4,8 @@ class BreadcrumbTagLib {
 
     static namespace = "crumbs"
 
+    def pluginManager
+
     def trail = { attrs, body ->
         def model = [:]
         model.selector = attrs.selector ?: grailsApplication.config.breadcrumbs.selector
@@ -13,7 +15,11 @@ class BreadcrumbTagLib {
     }
 
     def resources = { attrs, body ->
-        out << render(template: '/breadcrumbs/resources', plugin: 'breadcrumbs')
+        if (pluginManager.hasGrailsPlugin("resources")) {
+            out << r.require(module: 'breadcrumbs')
+        } else {
+            out << render(template: '/breadcrumbs/resources', plugin: 'breadcrumbs')
+        }
     }
 
     def crumbscript = { attrs, body ->
