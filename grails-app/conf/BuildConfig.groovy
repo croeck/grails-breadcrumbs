@@ -7,7 +7,7 @@ grails.project.source.level = 1.6
 
 grails.project.dependency.resolution = {
     inherits("global")
-    log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
+    log "warn" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true // Whether to verify checksums on resolve
 
     repositories {
