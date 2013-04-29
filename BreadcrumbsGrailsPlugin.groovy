@@ -3,9 +3,7 @@ class BreadcrumbsGrailsPlugin {
     def grailsVersion = "2.0.0 > *"
     def author = "James Hardwick"
     def authorEmail = "jamesdh@gmail.com"
-    def title = "Breadcrumbs"
+    def title = "Grails Breadcrumbs Plugin"
     def documentation = "http://grails.org/plugin/breadcrumbs"
-    def description = '''\\
-Provids a taglib for the simple yet customizeable generation of breadcrumbs.
-'''
+    def description = 'Provids a taglib for the simple yet customizeable generation of breadcrumbs.'
 }
