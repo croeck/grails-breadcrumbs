@@ -1,18 +1,12 @@
 package org.grails.plugins.breadcrumbs
 
-import grails.test.*
-import org.grails.plugins.breadcrumbs.Crumb
-import org.grails.plugins.breadcrumbs.CrumbController
-import org.junit.Test
-import org.codehaus.groovy.grails.commons.GrailsApplication
-
+import grails.test.ControllerUnitTestCase
 import groovy.mock.interceptor.MockFor
 
-class CrumbControllerUnitTests extends ControllerUnitTestCase {
+import org.codehaus.groovy.grails.commons.GrailsApplication
+import org.junit.Test
 
-    protected void setUp() {
-        super.setUp()
-    }
+class CrumbControllerUnitTests extends ControllerUnitTestCase {
 
     @Test
     void testAddToEmptyCrumbtrail() {

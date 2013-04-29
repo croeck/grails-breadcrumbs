@@ -1,8 +1,8 @@
 package org.grails.plugins.breadcrumbs
 
-import org.grails.plugins.breadcrumbs.Crumb
-import org.junit.Test
 import grails.test.GrailsUnitTestCase
+
+import org.junit.Test
 
 class CrumbUnitTests extends GrailsUnitTestCase {
 
@@ -35,6 +35,6 @@ class CrumbUnitTests extends GrailsUnitTestCase {
         def crumb1 = new Crumb(name:'name', href:'href')
         def crumb2 = new Crumb(name:'name', href:'href')
 
-        assertTrue crumb1.equals(crumb2)
+        assertEquals crumb1, crumb2
     }
 }
